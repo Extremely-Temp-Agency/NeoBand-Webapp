@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <fieldset>Neoband Management</fieldset>
+    <br><br>
+    <div class="login-container">
+        <form id="login-form">
+            <input type="password" id="password" placeholder="Password" class="password-input">
+        </form>
+    </div>
+    <div id="content-container">
+        <button id="save-labels" class="save-button hidden">SAVE LABELS</button>
+        <div id="write-column" class="column">
+            <h2>WRITE</h2>
+            <div class="scrollable-area">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Block</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be generated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+            <button class="action-button">WRITE</button>
+        </div>
+        <div class="column">
+            <h2>READ</h2>
+            <div class="scrollable-area">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Block</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be generated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+            <button class="action-button">READ</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+/* Dark Mode Color Palette */
+:root {
+    --background: #121212;
+    --primary-text: #E0E0E0;
+    --secondary-text: #B0B0B0;
+    --accent-color: #1DB954;
+    --highlight: #4BA3C7;
+    --error: #FF5252;
+    --border: #2C2C2C;
+    --input-bg: #2A2A2A;
+    --hover: #333333;
+    --success: #21C55D;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--primary-text);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow-y: auto; /* Allow vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+}
+
+/* Fieldset */
+fieldset {
+    width: 300px;
+    padding: 10px 15px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--primary-text);
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Save Button */
+.save-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: var(--highlight);
+    color: var(--primary-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+    display: none; /* Initially hidden */
+}
+
+.save-button.hidden {
+    display: none;
+}
+
+.save-button:not(.hidden) {
+    display: block;
+}
+
+
+/* Login Container */
+.login-container {
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Content Container */
+#content-container {
+    display: flex; /* Ensure columns are side-by-side */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    gap: 20px; /* Space between columns */
+    margin-top: 20px;
+    padding: 10px;
+    width: 90%; /* Ensure it fits within the screen */
+    max-width: 1200px; /* Limit the width on large screens */
+}
+
+/* Remaining CSS unchanged */
+
+/* Login Container */
+.login-container {
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Password Input */
+.password-input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    background-color: var(--input-bg);
+    color: var(--primary-text);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.password-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
+}
+
+/* Content Container */
+#content-container {
+    display: flex; /* Ensure columns are side-by-side */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    gap: 20px; /* Space between columns */
+    margin-top: 20px;
+    padding: 10px;
+    width: 90%; /* Ensure it fits within the screen */
+    max-width: 1200px; /* Limit the width on large screens */
+}
+
+/* Column Styles */
+.column {
+    width: 45%; /* Each column takes up 45% of the container */
+    min-width: 300px; /* Ensure columns don’t shrink too small */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--highlight);
+}
+
+/* Scrollable Area */
+.scrollable-area {
+    max-height: 400px; /* Limit the height of the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling for the table */
+    border: 1px solid var(--border);
+    width: 100%;
+    background-color: var(--input-bg);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--input-bg);
+    color: var(--primary-text);
+}
+
+table th,
+table td {
+    border: 1px solid var(--border);
+    padding: 10px;
+    text-align: center;
+}
+
+thead {
+    background-color: var(--hover);
+}
+
+/* Input Fields inside Tables */
+input[type="text"], select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background-color: var(--input-bg);
+    color: var(--primary-text);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* Buttons */
+.action-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--primary-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.action-button:hover {
+    background-color: var(--hover);
+}
